@@ -7,7 +7,7 @@ const SearchBar = () => {
     <div className="res-search-container">
       <input
         className="res-search-input"
-        placeholder="Search any restauarant"
+        placeholder="Search any restaurant"
         onKeyUp={(e) => console.log("searching..." + e.target.value)}
       />
     </div>
@@ -15,10 +15,10 @@ const SearchBar = () => {
 };
 
 const Body = () => {
-  const [listOfRestaurant, setListofRestaurant] = useState(resData);
+  const [listOfRestaurant, setListOfRestaurant] = useState(resData);
   const filterTopRestaurant = (results) => {
     const topRestaurants = results.filter((res) => res.info.avgRating > 4.2);
-    setListofRestaurant(topRestaurants);
+    setListOfRestaurant(topRestaurants);
   };
   return (
     <div className="body">
