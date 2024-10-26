@@ -1,3 +1,125 @@
-#heading {
-  color: blue;
+.header {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
+  width: 100%;
+}
+.logo {
+  width: 150px;
+  border-radius: 75px;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.app-title {
+  font-size: 60px;
+  color: #f4bb36;
+  font-family: "Gilroy-Bold", sans-serif;
+  text-shadow: 1px 1px 2px pink;
+}
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+  font-family: "Gilroy-Bold", sans-serif;
+}
+.nav-items > ul > li {
+  font-family: "Gilroy-Bold";
+  font-size: medium;
+  padding: 10px 20px;
+  margin: 10px;
+}
+.res-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.res-card {
+  width: 200px;
+  padding: 10px;
+  margin: 5px;
+  transition: transform 0.2s;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.res-card:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+.res-logo {
+  width: 200px;
+  height: 150px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.search {
+  padding: 10px;
+}
+.res-cuisine-eta {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.6);
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  overflow-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.res-title {
+  font-family: "Gilroy-Bold", sans-serif;
+  margin: 0px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+  overflow: hidden;
+  width: 100%;
+  display: -webkit-box;
+  overflow-wrap: break-word;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.res-rating-container {
+  display: flex;
+  font-family: "Gilroy", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+  overflow: hidden;
+  width: 100%;
+}
+.res-star-icon {
+  object-fit: contain;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+}
+.filter-btn {
+  margin: 10px;
+  display: flex;
+  padding: 5px;
+  border-color: #f4bb36;
+  border-radius: 5px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.filter {
+  display: flex;
+  align-items: center;
+}
+.res-search-input {
+  margin: 10px;
+  height: 25px;
+  width: 300px;
+  border-color: #f4bb36;
+  border-radius: 5px;
+  font-family: "Gilroy", sans-serif;
+  padding: 5px;
 }
