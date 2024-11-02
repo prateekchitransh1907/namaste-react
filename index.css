@@ -13,7 +13,7 @@
   align-items: center;
 }
 .app-title {
-  color: #f48636;
+  color: #f76800;
   text-shadow: 1px 1px 2px pink;
   font-family: Gilroy-Bold, sans-serif;
   font-size: 60px;
@@ -22,6 +22,15 @@
   display: flex;
   list-style-type: none;
   font-family: "Gilroy-Bold", sans-serif;
+}
+.res-info-list > ul {
+  display: block;
+  list-style-type: none;
+  font-family: "Gilroy-Bold", sans-serif;
+}
+.res-info-list > ul > li {
+  display: flex;
+  margin: 5px;
 }
 .nav-items > ul > li {
   font-family: "Gilroy-Bold";
@@ -205,4 +214,159 @@
   margin: 10px;
   padding: 5px;
   font-family: Gill Sans, Gill Sans MT, Calibri, Trebuchet MS, sans-serif;
+}
+.error-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.trivia-text {
+  margin: 15px;
+  font-size: small;
+  text-wrap: wrap;
+  line-break: auto;
+  color: darkgray;
+  font-family: sans-serif;
+}
+.trivia-title {
+  text-align: center;
+  font-size: x-large;
+  font-family: monospace;
+  color: cadetblue;
+  margin: 10px;
+  text-wrap: wrap;
+}
+.trivia-container {
+  display: block;
+  align-items: center;
+}
+.res-info-container {
+  border-radius: 15px;
+  border-top-right-radius: 5px;
+  width: auto;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+.res-info-title {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 22px;
+  margin: 15px;
+}
+.res-info-eta-ratings {
+  font-family: "Gilroy-Bold", sans-serif;
+  padding: 3px;
+  margin-left: 3px;
+}
+.res-info-outlet {
+  font-family: "Gilroy-Bold", sans-serif;
+  padding: 3px;
+  margin-left: 15px;
+}
+.res-info-areaName {
+  margin-left: 3px;
+  color: #f76800;
+}
+.res-menu-item-container {
+  border-bottom: 1px solid lightgray;
+}
+.res-menu-item-rating-container {
+  letter-spacing: -0.3px;
+  color: #02060ceb;
+  width: 25%;
+  font-family: Gilroy, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  display: flex;
+  overflow: hidden;
+  border-bottom: 2px dotted;
+  margin: 5px;
+}
+.res-menu-item-name {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.res-menu-item-desc {
+  font-size: 10px;
+  text-wrap: wrap;
+  width: 40%;
+  color: darkgray;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+.res-list-items {
+  display: flex;
+}
+.res-list-item-img {
+  width: 200px;
+  height: 150px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px;
+}
+.res-list-item-img-add-container {
+  text-align: center;
+  display: block;
+  margin: 15px;
+}
+.res-list-item-add-btn {
+  width: 75%;
+  padding: 5px;
+  background: white;
+  border-radius: 5px;
+}
+.res-list-item-details {
+  width: 100%;
+}
+.res-item-price-offer {
+  font-size: 12px;
+  line-height: 2em;
+}
+
+a,
+u {
+  text-decoration: none;
+}
+.user-card {
+  border-radius: 15px;
+  width: auto;
+  margin: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+.git-info-container {
+  margin: 10px;
+}
+.git-user-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.git-user-name {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 20px;
+  display: block;
+  line-height: 1em;
+}
+.git-user-location {
+  font-family: "Gilroy-Bold", sans-serif;
+  display: block;
+  font-size: 14px;
+  line-height: 1em;
+  color: #f76800;
+}
+.git-user-bio {
+  color: darkgrey;
+  font-family: Gilroy-Bold, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  display: block;
+}
+.git-user-summary {
+  font-family: Gilroy-Bold, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  display: block;
 }

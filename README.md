@@ -1,6 +1,7 @@
 # namaste-react
 
-Parcel 
+Parcel
+
 - Dev Build 💪🏻
 - Local Server 🖥
 - HMR 🔁
@@ -15,3 +16,8 @@ Parcel
 - Diagnostic & Error Handling ⚠️
 - HTTPS 🔒
 - Tree Shaking - Remove unused code 🌳
+
+# Routing in WebApps
+
+- Client Side Routing
+- Server Side Routing
