@@ -3,6 +3,7 @@ import Lottie from "react-lottie";
 import animationData from "../lottie/Logo.json";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const defaultOptions = {
   loop: true,
@@ -36,6 +37,7 @@ const Header = () => {
       </div>
       <div className="nav-items">
         <ul>
+          <li>Online Status {useOnlineStatus() ? "🟢" : "⚪️"}</li>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -45,7 +47,9 @@ const Header = () => {
           <li>
             <Link to="/contact">Contact Us</Link>
           </li>
-          <li>Cart</li>
+          <li>
+            <Link to="/instamart">Instamart</Link>
+          </li>
           <button
             onClick={() => {
               setBtnName(btnName === "Login" ? "Logout" : "Login");

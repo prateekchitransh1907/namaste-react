@@ -2,6 +2,8 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import NoInternet from "./NoInternet";
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
   const [filteredRestaurant, setFilteredRestaurant] = useState([]);
@@ -22,7 +24,7 @@ const Body = () => {
       json.data?.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
   };
-
+  const onlineStatus = useOnlineStatus();
   const filterTopRestaurant = (results) => {
     const topRestaurants = results.filter((res) => res.info.avgRating > 4.2);
     console.log(topRestaurants);
@@ -45,6 +47,8 @@ const Body = () => {
     console.log(filteredRestaurant);
     setFilteredRestaurant(filteredRestaurant);
   };
+
+  if (onlineStatus === false) return <NoInternet />;
   //Conditional Rendering
   //   if (listOfRestaurant.length === 0) {
   //     return <ShimmerUI />;

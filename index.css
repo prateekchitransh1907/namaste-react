@@ -371,3 +371,15 @@ u {
   line-height: 1.5em;
   display: block;
 }
+.no-internet-container {
+  width: auto;
+  height: 400px;
+  text-align: -webkit-center;
+}
+.no-internet-message {
+  color: darkgrey;
+  font-family: Gilroy-Bold, sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  display: block;
+}
