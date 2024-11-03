@@ -8,7 +8,7 @@ const RestaurantMenu = () => {
   const resId = useParams();
   const addItem = (item) => {};
   const resInfo = useRestaurantMenu(resId);
-  const [showIndex, setShowIndex] = useState(null);
+  const [showIndex, setShowIndex] = useState(0);
   if (resInfo === null) return <ShimmerUI />;
   const {
     name,
