@@ -47,6 +47,7 @@
   width: 200px;
   padding: 10px;
   margin: 5px;
+  position: relative;
   transition: transform 0.2s;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -243,7 +244,6 @@
 }
 .res-info-container {
   border-radius: 15px;
-  border-top-right-radius: 5px;
   width: auto;
   margin: 15px;
   padding: 15px;
@@ -287,13 +287,14 @@
 .res-menu-item-name {
   margin-bottom: 10px;
   margin-top: 10px;
+  font-family: Gilroy-Bold, sans-serif;
 }
 .res-menu-item-desc {
   font-size: 10px;
+  font-family: Gilroy-Medium, sans-serif;
   text-wrap: wrap;
   width: 40%;
   color: darkgray;
-  font-family: sans-serif;
   margin-bottom: 10px;
 }
 .res-list-items {
@@ -382,4 +383,30 @@ u {
   font-size: 16px;
   line-height: 1.5em;
   display: block;
+}
+.offer-label {
+  color: #fff;
+  text-shadow: 0 4px 8px #0003, 0 6px 20px #000000;
+  z-index: 10;
+  font-family: Gilroy-Bold, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: absolute;
+  top: 133px;
+  left: 33px;
+}
+.item-category-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 15px 15px 15px 15px;
+  width: auto;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+  align-items: center;
+  font-family: Gilroy-Bold, sans-serif;
+}
+.item-category-accordion-header:hover {
+  color: white;
+  background-color: #f76800;
 }

@@ -18,7 +18,19 @@ const RestaurantCard = (props) => {
         className="res-logo"
         src={CDN_URL + cloudinaryImageId}
       />
+      <div>
+        <label className="offer-label">
+          {props.resData.info?.aggregatedDiscountInfoV3?.header &&
+          props.resData.info?.aggregatedDiscountInfoV3?.subHeader
+            ? props.resData.info?.aggregatedDiscountInfoV3?.header +
+              " " +
+              props.resData.info?.aggregatedDiscountInfoV3?.subHeader
+            : ""}
+        </label>
+      </div>
+
       <div className="res-title">{name}</div>
+
       <div className="res-cuisine-eta">{cuisines.join(", ")}</div>
       <div className="res-rating-container">
         <img
@@ -36,5 +48,21 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
+
+// export const offerRestaurantCard = (RestaurantCard) => {
+//   return (props) => {
+//     console.log("props", props);
+//     return (
+//       <div>
+//         <label className="offer-label">
+//           {props.resData.info.aggregatedDiscountInfoV3.header +
+//             " " +
+//             props.resData.info.aggregatedDiscountInfoV3.subHeader}
+//         </label>
+//         <RestaurantCard {...props} />
+//       </div>
+//     );
+//   };
+// };
 
 export default RestaurantCard;

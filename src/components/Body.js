@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { offerRestaurantCard } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import ShimmerUI from "./ShimmerUI";
 import { Link } from "react-router-dom";
@@ -24,6 +24,7 @@ const Body = () => {
       json.data?.cards[1].card.card.gridElements.infoWithStyle.restaurants
     );
   };
+  // const RestaurantCardOffer = offerRestaurantCard(RestaurantCard);
   const onlineStatus = useOnlineStatus();
   const filterTopRestaurant = (results) => {
     const topRestaurants = results.filter((res) => res.info.avgRating > 4.2);
@@ -86,7 +87,11 @@ const Body = () => {
       <div className="res-container">
         {filteredRestaurant.map((res) => (
           <Link key={res.info.id} to={"/restaurants/" + res.info.id}>
+            {/* {res.info.aggregatedDiscountInfoV3.header ? (
+              <RestaurantCardOffer resData={res} />
+            ) : ( */}
             <RestaurantCard resData={res} />
+            {/* )} */}
           </Link>
         ))}
       </div>

@@ -2,11 +2,13 @@ import ShimmerUI from "./ShimmerUI";
 import { CDN_URL } from "../utils/constants";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
+import { useState } from "react";
 const RestaurantMenu = () => {
   const resId = useParams();
   const addItem = (item) => {};
   const resInfo = useRestaurantMenu(resId);
-
+  const [showIndex, setShowIndex] = useState(null);
   if (resInfo === null) return <ShimmerUI />;
   const {
     name,
@@ -22,7 +24,16 @@ const RestaurantMenu = () => {
 
   const { itemCards } =
     resInfo?.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card;
-  console.log(itemCards);
+  console.log("itemCards", itemCards);
+
+  const categories =
+    resInfo?.cards[4].groupedCard.cardGroupMap.REGULAR.cards.filter(
+      (c) =>
+        c.card.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+  console.log("categories", categories);
+
   return (
     <div>
       <div className="res-info-title">{name}</div>
@@ -43,41 +54,22 @@ const RestaurantMenu = () => {
           Outlet <span className="res-info-areaName">{areaName}</span>
         </div>
         <div className="res-info-list">
-          <ul>
-            {itemCards.map((item) => (
-              <div key={item.card.info.id} className="res-menu-item-container">
-                <li className="res-list-items">
-                  <div className="res-list-item-details ">
-                    <div className="res-menu-item-name">
-                      {item.card.info.name}
-                      <div className="res-item-price-offer">
-                        ₹
-                        {item.card.info.price
-                          ? item.card.info.price / 100
-                          : item.card.info.defaultPrice / 100}
-                      </div>
-                    </div>
-                    <div className="res-menu-item-desc">
-                      {item.card.info.description}
-                    </div>
-                  </div>
-                  <div className="res-list-item-img-add-container">
-                    <img
-                      alt="res-logo"
-                      className="res-list-item-img"
-                      src={CDN_URL + item.card.info.imageId}
-                    />
-                    <button
-                      className="res-list-item-add-btn"
-                      onClick={() => addItem(item)}
-                    >
-                      ADD +
-                    </button>
-                  </div>
-                </li>
-              </div>
-            ))}
-          </ul>
+          {categories.map((category, index) => {
+            return (
+              //controlled component by lifting the state up
+              <RestaurantCategory
+                category={category.card.card}
+                key={category.card.card.title}
+                showItems={index === showIndex ? true : false}
+                setShowIndex={() =>
+                  //hide the accordion if clicked twice
+                  //if the index of category is same as the state index set showIndex to null
+                  //this will make showItems = { index === null ? true : false which will return false hence closing the clicked accordion}
+                  setShowIndex(index === showIndex ? null : index)
+                }
+              />
+            );
+          })}
         </div>
       </div>
     </div>
