@@ -30,3 +30,19 @@ Parcel
 - Create Slice
 - dispatch ---> Action
 - Selector ( READ STORE VALUES )
+
+# Types of Testing ( As a Developer )
+
+- Unit Testing - Test your component in isolation
+- Integration Testing - Test the components in a flow
+- End to End E2E Testing - Test all the flows from landing on the app to exit
+
+# Setting up testing in your app
+
+- Install React Testing Library
+- Install Jest
+- Install Babel Dependencies
+- Configure Babel
+- Configure Parcelrc file to disable default Babel Transpilation
+- Jest configuration
+- Install JsDom Library
