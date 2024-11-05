@@ -6,7 +6,7 @@ import RestaurantCategory from "./RestaurantCategory";
 import { useState } from "react";
 const RestaurantMenu = () => {
   const resId = useParams();
-  const addItem = (item) => {};
+  const addItem = () => {};
   const resInfo = useRestaurantMenu(resId);
   const [showIndex, setShowIndex] = useState(0);
   if (resInfo === null) return <ShimmerUI />;

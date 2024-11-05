@@ -21,3 +21,12 @@ Parcel
 
 - Client Side Routing
 - Server Side Routing
+
+# Redux Toolkit
+
+- Install @reduxjs/toolkit and react-redux
+- Build the store
+- Connect store to app
+- Create Slice
+- dispatch ---> Action
+- Selector ( READ STORE VALUES )
