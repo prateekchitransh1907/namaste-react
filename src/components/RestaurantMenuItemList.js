@@ -13,7 +13,11 @@ const RestaurantMenuItemList = ({ itemCards }) => {
     <div>
       <ul>
         {itemCards.map((item) => (
-          <div key={item.card.info.id} className="res-menu-item-container">
+          <div
+            data-testid="fooditems"
+            key={item.card.info.id}
+            className="res-menu-item-container"
+          >
             <li className="res-list-items">
               <div className="res-list-item-details ">
                 <div className="res-menu-item-name">

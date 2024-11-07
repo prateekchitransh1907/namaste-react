@@ -28,14 +28,12 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   const filterTopRestaurant = (results) => {
     const topRestaurants = results.filter((res) => res.info.avgRating > 4.2);
-    console.log(topRestaurants);
     setFilteredRestaurant(topRestaurants);
   };
   const sortTopRestaurant = (results) => {
     const topSortedRestaurants = [...results].sort((a, b) => {
       return a.info.avgRating - b.info.avgRating;
     });
-    console.log(topSortedRestaurants);
     setFilteredRestaurant(topSortedRestaurants);
   };
   const searchRestaurant = () => {
@@ -45,7 +43,6 @@ const Body = () => {
             res.info.name.toLowerCase().includes(searchText.toLowerCase())
           )
         : listOfRestaurant;
-    console.log(filteredRestaurant);
     setFilteredRestaurant(filteredRestaurant);
   };
 
@@ -62,6 +59,7 @@ const Body = () => {
         <div className="res-search-container">
           <input
             type="text"
+            data-testid="searchbar"
             className="res-search-input"
             onChange={(e) => {
               setSearchText(e.target.value);
@@ -72,6 +70,7 @@ const Body = () => {
           />
         </div>
         <button
+          data-testid="topRated"
           className="filter-btn"
           onClick={() => filterTopRestaurant(filteredRestaurant)}
         >

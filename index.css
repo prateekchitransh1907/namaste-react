@@ -466,3 +466,44 @@ u {
   color: #f76800;
   font-family: Gilroy-Bold, sans-serif;
 }
+.contact-card {
+  border-radius: 15px;
+  width: auto;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 8px #0003, 0 6px 20px #00000030;
+}
+.contact-title {
+  color: #f76800;
+  font-family: Gilroy-Bold, sans-serif;
+}
+.contact-form {
+}
+.contact {
+  display: block;
+  margin-top: 15px;
+  font-family: Gilroy-Medium, sans-serif;
+  width: 25%;
+  border: 2px solid #f68000;
+  padding: 10px;
+  border-radius: 10px;
+}
+.contact-comment {
+  display: block;
+  margin-top: 15px;
+  font-family: Gilroy-Medium, sans-serif;
+  width: 33%;
+  min-height: 100px;
+  border: 2px solid #f68000;
+  padding: 10px;
+  border-radius: 10px;
+}
+.add-query-btn {
+  margin-top: 10px;
+  display: flex;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  background-color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}

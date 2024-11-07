@@ -36,6 +36,7 @@ const Header = () => {
         </Link>
         <span className="app-title">Binge Eat</span>
         <Lottie
+          isClickToPauseDisabled={true}
           style={{ margin: 15 }}
           options={defaultOptions}
           height={100}

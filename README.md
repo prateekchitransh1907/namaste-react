@@ -46,3 +46,6 @@ Parcel
 - Configure Parcelrc file to disable default Babel Transpilation
 - Jest configuration
 - Install JsDom Library
+- Intsall @babel/preset-react to make JSX testable in React
+- Include @babel/preset-react in babel config file
+- Install @testing-library/jest-dom

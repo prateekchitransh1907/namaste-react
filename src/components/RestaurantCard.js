@@ -12,7 +12,7 @@ const RestaurantCard = (props) => {
     areaName,
   } = props.resData?.info;
   return (
-    <div className="res-card">
+    <div data-testid="resCard" className="res-card">
       <img
         alt="res-logo"
         className="res-logo"
